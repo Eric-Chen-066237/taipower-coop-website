@@ -8,6 +8,88 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+<style>
+  /* ===========================================================
+     首頁專屬配色（比照台電公司官網：白底＋淺藍格狀選單＋綠色標題列）
+     僅套用於本頁，其他頁面沿用原本 style.css 綠色/米色主題
+     =========================================================== */
+  :root{
+    --tp-blue: #1B4F7C;
+    --tp-blue-line: #7EA9D6;
+    --tp-blue-bg: #EAF2FB;
+    --tp-blue-bg-hover: #D7E9FA;
+    --tp-green: #6FA23C;
+    --tp-green-dark: #588233;
+    --tp-page-bg: #F3F7FB;
+    --tp-row-alt: #DCEBF8;
+    --tp-border: #C9D9E8;
+  }
+  body{ background: var(--tp-page-bg); }
+
+  .topbar{ background: var(--tp-blue); color: #eaf2fb; }
+  .topbar a{ color: #eaf2fb; }
+  .topbar a:hover{ color: #ffffff; }
+
+  header.site-header{ background: #ffffff; border-bottom: 2px solid var(--tp-blue); }
+  .brand-mark{ background: linear-gradient(135deg, var(--tp-blue), #0f3a5c); }
+  .brand-text .name-main{ color: var(--tp-blue); font-weight: 900; }
+  .brand-text .name-sub{ color: var(--tp-blue-line); letter-spacing: .05em; }
+
+  nav.main-nav a:hover, nav.main-nav a.active{ background: var(--tp-blue-bg); color: var(--tp-blue); }
+
+  /* ---------- 橫式主選單：7 大社員專區文件 ---------- */
+  .doc-nav{ background: #ffffff; border-bottom: 1px solid var(--tp-border); padding: 18px 0; }
+  .doc-nav-grid{
+    display: flex; flex-wrap: wrap; gap: 12px;
+  }
+  .doc-nav-grid a{
+    flex: 1 1 calc(14.28% - 12px);
+    min-width: 150px;
+    text-align: center;
+    padding: 14px 10px;
+    background: var(--tp-blue-bg);
+    border: 1px solid var(--tp-blue-line);
+    border-radius: 999px;
+    color: var(--tp-blue);
+    font-weight: 700;
+    font-size: 14.5px;
+    line-height: 1.4;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .doc-nav-grid a:hover{ background: var(--tp-blue-bg-hover); transform: translateY(-2px); }
+  @media (max-width: 980px){ .doc-nav-grid a{ flex: 1 1 calc(33.33% - 12px); } }
+  @media (max-width: 620px){ .doc-nav-grid a{ flex: 1 1 calc(50% - 12px); } }
+
+  .hero{ background: var(--tp-page-bg); color: var(--tp-blue); padding: 48px 0 40px; }
+  .hero h1{ color: var(--tp-blue); font-weight: 900; }
+  .hero p{ color: #33475a; }
+  .hero-tags span{ background: var(--tp-blue-bg); border: 1px solid var(--tp-blue-line); color: var(--tp-blue); }
+  .btn-primary{ background: var(--tp-green); color: #ffffff; }
+  .btn-primary:hover{ background: var(--tp-green-dark); }
+  .btn-outline{ border: 1px solid var(--tp-blue); color: var(--tp-blue); }
+  .btn-outline:hover{ background: var(--tp-blue-bg); }
+  .btn-solid{ background: var(--tp-blue); color: #ffffff; }
+  .btn-solid:hover{ background: #0f3a5c; }
+
+  /* ---------- 綠色標題列（比照台電官網「單位網站」樣式） ---------- */
+  .green-bar{
+    background: var(--tp-green); color: #ffffff; font-weight: 700; font-size: 16px;
+    padding: 12px 20px; border-radius: 6px 6px 0 0;
+  }
+  .notice-list{ border: 1px solid var(--tp-border); border-top: none; border-radius: 0 0 8px 8px; }
+  .notice-item:nth-child(even){ background: var(--tp-row-alt); }
+  .notice-item:hover{ background: var(--tp-blue-bg-hover); }
+  .notice-date{ background: var(--tp-blue); color: #ffffff; }
+  .notice-tag{ background: var(--tp-green); color: #ffffff; }
+  .section-title{ color: var(--tp-blue); }
+  .section-title::before{ background: var(--tp-green); }
+
+  footer.site-footer{ background: var(--tp-blue); color: #dce8f5; }
+  footer.site-footer h4{ color: #ffffff; }
+  footer.site-footer a:hover{ color: #ffffff; }
+  .copyright{ color: #9fbdd9; }
+</style>
+
 </head>
 <body>
 <div class="topbar">
@@ -25,7 +107,7 @@
         <div class="brand-mark">台電</div>
         <div class="brand-text">
           <div class="name-main">台電總管理處員工消費合作社</div>
-          <div class="name-sub">Taipower Headquarters Employee Consumer Cooperative</div>
+          <div class="name-sub">TAIPOWER EMPLOYEE CONSUMER COOPERATIVE</div>
         </div>
       </a>
       <nav class="main-nav">
@@ -40,6 +122,19 @@
     </div>
   </header>
 
+<section class="doc-nav">
+  <div class="container">
+    <div class="doc-nav-grid">
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_e163f4eb58ab46dfaa9be1dbbb0bc4dc.pdf" target="_blank" rel="noopener">115年度社業務計畫草案</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_45d03a9112f544868437a6b94e84ff23.pdf" target="_blank" rel="noopener">總管理處員工消費合作社章程</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_b91ee99d09fe4e7e844514019072562b.pdf" target="_blank" rel="noopener">員工消費合作社選舉罷免辦法</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_504e00276db544398643ff46e3ede6ad.pdf" target="_blank" rel="noopener">會議紀錄</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_00c2dcaadf28481285958f4c4b21e5ef.pdf" target="_blank" rel="noopener">理監事名單</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_974e047fa13f47d385c5d4ec8f8d037d.pdf" target="_blank" rel="noopener">會務名單</a>
+      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_03e3f0b1b38941879054db52573428be.pdf" target="_blank" rel="noopener">消合社-團體保險</a>
+    </div>
+  </div>
+</section>
 
 <section class="hero">
   <div class="container">
@@ -59,8 +154,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">最新公告</h2>
-    <p class="section-desc">合作社重要訊息、會議通知與業務公告，第一時間掌握。</p>
+    <div class="green-bar">最新公告</div>
     <div class="notice-list">
       <div class="notice-item">
         <div class="notice-date">07<br>24</div>
@@ -90,32 +184,12 @@
   </div>
 </section>
 
-<section class="mission-section">
-  <div class="container mission-grid">
-    <div class="mission-links">
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_e163f4eb58ab46dfaa9be1dbbb0bc4dc.pdf" target="_blank" rel="noopener">115年度社業務計畫草案</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_45d03a9112f544868437a6b94e84ff23.pdf" target="_blank" rel="noopener">總管理處員工消費合作社章程</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_b91ee99d09fe4e7e844514019072562b.pdf" target="_blank" rel="noopener">員工消費合作社選舉罷免辦法</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_504e00276db544398643ff46e3ede6ad.pdf" target="_blank" rel="noopener">會議紀錄</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_00c2dcaadf28481285958f4c4b21e5ef.pdf" target="_blank" rel="noopener">理監事名單</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_974e047fa13f47d385c5d4ec8f8d037d.pdf" target="_blank" rel="noopener">會務名單</a>
-      <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_03e3f0b1b38941879054db52573428be.pdf" target="_blank" rel="noopener">消合社-團體保險</a>
-    </div>
-    <div class="mission-content">
-      <div class="mission-image"></div>
-      <h2>我們的使命與宗旨</h2>
-      <p>台電總管理處員工消費合作社成立於民國八十年，秉持非營利的宗旨，致力於為全體同仁提供優質且具競爭力的消費服務。我們深信，透過彼此的互助與合作，不僅能提升員工的生活品質，更能凝聚團隊的向心力與歸屬感。</p>
-      <p>我們的服務涵蓋生活用品、專業服務及多樣化福利，旨在為同仁創造更舒適、更便利的消費環境。我們持續精進服務品質，並透過透明的運作與誠信的服務，成為同仁最值得信賴的夥伴。</p>
-    </div>
-  </div>
-</section>
-
 <footer class="site-footer">
     <div class="container">
       <div class="foot-grid">
         <div>
           <h4>台灣電力股份有限公司總管理處員工消費合作社</h4>
-          <p style="color:#c9d9ef;">本網站為設計原型（本機測試版），內容為示意用途，正式上線前將由合作社確認並更新為正式資料。</p>
+          <p style="color:#dce8f5;">本網站為設計原型（本機測試版），內容為示意用途，正式上線前將由合作社確認並更新為正式資料。</p>
         </div>
         <div>
           <h4>快速連結</h4>
