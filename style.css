@@ -18,6 +18,24 @@
 
 * { box-sizing: border-box; }
 
+/* ---------- Mission section (cream/green, matches reference layout) ---------- */
+.mission-section { background: #F7F3EA; padding: 72px 0; }
+.mission-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+@media (max-width: 860px) { .mission-grid { grid-template-columns: 1fr; gap: 32px; } }
+.mission-links { display: flex; flex-direction: column; }
+.mission-links a {
+  display: block; text-align: right; padding: 18px 0;
+  border-bottom: 1px solid #ddd6c4;
+  color: #1F4B3F; font-size: 16.5px; font-weight: 500;
+}
+.mission-links a:first-child { padding-top: 0; }
+.mission-links a:hover { color: #0d2a20; text-decoration: underline; }
+.mission-content h2 {
+  font-size: 34px; font-weight: 900; color: #173C30; margin: 0 0 24px; letter-spacing: .02em;
+}
+.mission-content p { color: #2b3a34; font-size: 15.5px; line-height: 1.9; margin: 0 0 22px; }
+.mission-content p:last-child { margin-bottom: 0; }
+
 body {
   margin: 0;
   font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system,
