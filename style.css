@@ -164,3 +164,16 @@ footer.site-footer a:hover { color: var(--white); }
 .badge-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
 .badge-list a { background: var(--white); border: 1px solid var(--border); padding: 8px 16px; border-radius: 999px; font-size: 13px; color: var(--primary); }
 .badge-list a.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+/* ---------- Two-column page layout with sidebar (參考頁面版型：內文＋側欄) ---------- */
+.page-layout { display: grid; grid-template-columns: 2.2fr 1fr; gap: 32px; align-items: start; }
+@media (max-width: 900px) { .page-layout { grid-template-columns: 1fr; } }
+.sidebar-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 20px; box-shadow: var(--shadow); }
+.sidebar-box h3 { margin: 0 0 16px; font-size: 16px; font-weight: 900; color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+.sidebar-list { list-style: none; margin: 0; padding: 0; }
+.sidebar-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; line-height: 1.6; }
+.sidebar-list li:last-child { border-bottom: none; }
+.sidebar-list a:hover { color: var(--primary); text-decoration: underline; }
+.sidebar-contact p { margin: 0 0 14px; font-size: 13.5px; }
+.sidebar-contact p:last-child { margin-bottom: 0; }
+.sidebar-contact p strong { display: block; color: var(--primary); font-size: 12px; font-weight: 700; margin-bottom: 3px; }
