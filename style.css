@@ -3,39 +3,40 @@
    =========================================================== */
 
 :root {
-  --primary: #1A2E26;
-  --primary-dark: #0F1E18;
-  --primary-light: #F2EEE1;
-  --accent: #C9A227;
-  --text: #2b3a34;
-  --text-light: #6b7a72;
-  --border: #e4dfd0;
-  --bg: #FDFBF7;
+  --primary: #1B4F7C;
+  --primary-dark: #0F3A5C;
+  --primary-light: #EAF2FB;
+  --accent: #6FA23C;
+  --text: #33475A;
+  --text-light: #6b7a8a;
+  --border: #C9D9E8;
+  --bg: #F3F7FB;
   --white: #ffffff;
   --radius: 10px;
-  --shadow: 0 2px 10px rgba(26, 46, 38, 0.08);
+  --shadow: 0 2px 10px rgba(27, 79, 124, 0.08);
 }
 
 * { box-sizing: border-box; }
 
-/* ---------- Mission section (cream/green, matches reference layout) ---------- */
-.mission-section { background: #FDFBF7; padding: 72px 0; }
-.mission-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
-@media (max-width: 860px) { .mission-grid { grid-template-columns: 1fr; gap: 32px; } }
-.mission-image { width: 100%; height: 220px; border-radius: 6px; margin-bottom: 32px; background: linear-gradient(135deg, #223b31 0%, #1A2E26 55%, #0F1E18 100%); }
-.mission-links { display: flex; flex-direction: column; }
-.mission-links a {
-  display: block; text-align: right; padding: 18px 0;
-  border-bottom: 1px solid #ddd6c4;
-  color: #1A2E26; font-size: 16.5px; font-weight: 500;
+/* ---------- 橫式主選單：文件快速連結（比照台電官網樣式） ---------- */
+.doc-nav { background: #ffffff; border-bottom: 1px solid var(--border); padding: 18px 0; }
+.doc-nav-grid { display: flex; flex-wrap: nowrap; gap: 8px; }
+.doc-nav-grid a {
+  flex: 1 1 0; min-width: 0; text-align: center; padding: 12px 6px;
+  background: var(--primary-light); border: 1px solid var(--border);
+  border-radius: 999px; color: var(--primary); font-weight: 700; font-size: 12.5px;
+  line-height: 1.35; white-space: normal; word-break: keep-all;
+  transition: background .15s ease, transform .15s ease;
 }
-.mission-links a:first-child { padding-top: 0; }
-.mission-links a:hover { color: #0d2a20; text-decoration: underline; }
-.mission-content h2 {
-  font-size: 40px; font-weight: 900; color: #1A2E26; margin: 0 0 24px; letter-spacing: .02em;
+.doc-nav-grid a:hover { background: #d7e9fa; transform: translateY(-2px); }
+@media (max-width: 900px) {
+  .doc-nav-grid { flex-wrap: wrap; }
+  .doc-nav-grid a { flex: 1 1 calc(33.33% - 8px); font-size: 13.5px; padding: 14px 10px; }
 }
-.mission-content p { color: #2b3a34; font-size: 15.5px; line-height: 1.9; margin: 0 0 22px; }
-.mission-content p:last-child { margin-bottom: 0; }
+@media (max-width: 620px) { .doc-nav-grid a { flex: 1 1 calc(50% - 8px); } }
+
+/* ---------- 綠色標題列 ---------- */
+.green-bar { background: var(--accent); color: #ffffff; font-weight: 700; font-size: 16px; padding: 12px 20px; border-radius: 6px 6px 0 0; }
 
 body {
   margin: 0;
@@ -116,14 +117,14 @@ nav.main-nav a:hover, nav.main-nav a.active { background: var(--primary-light); 
 .notice-item:last-child { border-bottom: none; }
 .notice-item:hover { background: var(--primary-light); }
 .notice-date { flex-shrink: 0; width: 88px; text-align: center; background: var(--primary-light); color: var(--primary-dark); border-radius: 8px; padding: 8px 4px; font-size: 13px; font-weight: 600; }
-.notice-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #4a3800; font-weight: 700; margin-right: 8px; }
+.notice-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #ffffff; font-weight: 700; margin-right: 8px; }
 .notice-title { font-size: 15px; font-weight: 500; }
 .notice-meta { font-size: 12.5px; color: var(--text-light); margin-top: 4px; }
 
 /* ---------- Buttons ---------- */
 .btn { display: inline-block; padding: 11px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; }
-.btn-primary { background: var(--accent); color: #4a3800; }
-.btn-primary:hover { background: #f2c948; }
+.btn-primary { background: var(--accent); color: #ffffff; }
+.btn-primary:hover { background: #5c8a2f; }
 .btn-outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
 .btn-outline:hover { background: var(--primary-light); }
 .btn-solid { background: var(--primary); color: var(--white); }

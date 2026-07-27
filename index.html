@@ -8,93 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-<style>
-  /* ===========================================================
-     首頁專屬配色（比照台電公司官網：白底＋淺藍格狀選單＋綠色標題列）
-     僅套用於本頁，其他頁面沿用原本 style.css 綠色/米色主題
-     =========================================================== */
-  :root{
-    --tp-blue: #1B4F7C;
-    --tp-blue-line: #7EA9D6;
-    --tp-blue-bg: #EAF2FB;
-    --tp-blue-bg-hover: #D7E9FA;
-    --tp-green: #6FA23C;
-    --tp-green-dark: #588233;
-    --tp-page-bg: #F3F7FB;
-    --tp-row-alt: #DCEBF8;
-    --tp-border: #C9D9E8;
-  }
-  body{ background: var(--tp-page-bg); }
-
-  .topbar{ background: var(--tp-blue); color: #eaf2fb; }
-  .topbar a{ color: #eaf2fb; }
-  .topbar a:hover{ color: #ffffff; }
-
-  header.site-header{ background: #ffffff; border-bottom: 2px solid var(--tp-blue); }
-  .brand-mark{ background: linear-gradient(135deg, var(--tp-blue), #0f3a5c); }
-  .brand-text .name-main{ color: var(--tp-blue); font-weight: 900; }
-  .brand-text .name-sub{ color: var(--tp-blue-line); letter-spacing: .05em; }
-
-  nav.main-nav a:hover, nav.main-nav a.active{ background: var(--tp-blue-bg); color: var(--tp-blue); }
-
-  /* ---------- 橫式主選單：7 大社員專區文件（單行不換列） ---------- */
-  .doc-nav{ background: #ffffff; border-bottom: 1px solid var(--tp-border); padding: 18px 0; }
-  .doc-nav-grid{
-    display: flex; flex-wrap: nowrap; gap: 8px;
-  }
-  .doc-nav-grid a{
-    flex: 1 1 0;
-    min-width: 0;
-    text-align: center;
-    padding: 12px 6px;
-    background: var(--tp-blue-bg);
-    border: 1px solid var(--tp-blue-line);
-    border-radius: 999px;
-    color: var(--tp-blue);
-    font-weight: 700;
-    font-size: 12.5px;
-    line-height: 1.35;
-    white-space: normal;
-    word-break: keep-all;
-    transition: background .15s ease, transform .15s ease;
-  }
-  .doc-nav-grid a:hover{ background: var(--tp-blue-bg-hover); transform: translateY(-2px); }
-  @media (max-width: 900px){
-    .doc-nav-grid{ flex-wrap: wrap; }
-    .doc-nav-grid a{ flex: 1 1 calc(33.33% - 8px); font-size: 13.5px; padding: 14px 10px; }
-  }
-  @media (max-width: 620px){ .doc-nav-grid a{ flex: 1 1 calc(50% - 8px); } }
-
-  .hero{ background: var(--tp-page-bg); color: var(--tp-blue); padding: 48px 0 40px; }
-  .hero h1{ color: var(--tp-blue); font-weight: 900; }
-  .hero p{ color: #33475a; }
-  .hero-tags span{ background: var(--tp-blue-bg); border: 1px solid var(--tp-blue-line); color: var(--tp-blue); }
-  .btn-primary{ background: var(--tp-green); color: #ffffff; }
-  .btn-primary:hover{ background: var(--tp-green-dark); }
-  .btn-outline{ border: 1px solid var(--tp-blue); color: var(--tp-blue); }
-  .btn-outline:hover{ background: var(--tp-blue-bg); }
-  .btn-solid{ background: var(--tp-blue); color: #ffffff; }
-  .btn-solid:hover{ background: #0f3a5c; }
-
-  /* ---------- 綠色標題列（比照台電官網「單位網站」樣式） ---------- */
-  .green-bar{
-    background: var(--tp-green); color: #ffffff; font-weight: 700; font-size: 16px;
-    padding: 12px 20px; border-radius: 6px 6px 0 0;
-  }
-  .notice-list{ border: 1px solid var(--tp-border); border-top: none; border-radius: 0 0 8px 8px; }
-  .notice-item:nth-child(even){ background: var(--tp-row-alt); }
-  .notice-item:hover{ background: var(--tp-blue-bg-hover); }
-  .notice-date{ background: var(--tp-blue); color: #ffffff; }
-  .notice-tag{ background: var(--tp-green); color: #ffffff; }
-  .section-title{ color: var(--tp-blue); }
-  .section-title::before{ background: var(--tp-green); }
-
-  footer.site-footer{ background: var(--tp-blue); color: #dce8f5; }
-  footer.site-footer h4{ color: #ffffff; }
-  footer.site-footer a:hover{ color: #ffffff; }
-  .copyright{ color: #9fbdd9; }
-</style>
-
 </head>
 <body>
 <div class="topbar">
@@ -102,7 +15,7 @@
       <span>台灣電力股份有限公司總管理處員工消費合作社</span>
       <div>
         <a href="about.html">聯絡我們</a>
-        <a href="members.html">社員專區</a>
+        <a href="news.html">公告/最新消息</a>
       </div>
     </div>
   </div>
@@ -119,7 +32,6 @@
         <ul>
           <li><a class="active" href="index.html">首頁</a></li>
 <li><a class="" href="news.html">公告/最新消息</a></li>
-<li><a class="" href="members.html">社員專區</a></li>
 <li><a class="" href="about.html">關於我們</a></li>
 
         </ul>
@@ -127,7 +39,7 @@
     </div>
   </header>
 
-<section class="doc-nav">
+<section class="doc-nav" id="documents">
   <div class="container">
     <div class="doc-nav-grid">
       <a href="https://adb7a6c7-a192-4dac-a1f6-1f492c60ffc0.filesusr.com/ugd/57cb53_e163f4eb58ab46dfaa9be1dbbb0bc4dc.pdf" target="_blank" rel="noopener">115年度社業務計畫草案</a>
@@ -151,7 +63,7 @@
       <span>合作互助</span>
     </div>
     <div style="margin-top:28px; display:flex; gap:12px;">
-      <a class="btn btn-primary" href="members.html">進入社員專區</a>
+      <a class="btn btn-primary" href="#documents">查看社務文件</a>
       <a class="btn btn-outline" href="news.html">查看最新公告</a>
     </div>
   </div>
@@ -175,13 +87,6 @@
           <div class="notice-meta">發布單位：會務組｜2026-07-10</div>
         </div>
       </div>
-      <div class="notice-item">
-        <div class="notice-date">06<br>28</div>
-        <div>
-          <div><span class="notice-tag">選舉</span><span class="notice-title">理監事選舉罷免辦法修正公告</span></div>
-          <div class="notice-meta">發布單位：理事會｜2026-06-28</div>
-        </div>
-      </div>
     </div>
     <div style="text-align:center; margin-top:24px;">
       <a class="btn btn-solid" href="news.html">查看全部公告</a>
@@ -200,17 +105,9 @@
           <h4>快速連結</h4>
           <ul>
             <li><a href="news.html">公告/最新消息</a></li>
-            <li><a href="members.html">社員專區</a></li>
             <li><a href="about.html">關於我們</a></li>
             <li><a href="about.html#contact">聯絡資訊</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>社員專區文件</h4>
-          <ul>
-            <li><a href="members-charter.html">合作社章程</a></li>
-            <li><a href="members-board.html">理監事名單</a></li>
-            <li><a href="members-minutes.html">會議紀錄</a></li>
+            <li><a href="index.html#documents">社務文件下載</a></li>
           </ul>
         </div>
       </div>
